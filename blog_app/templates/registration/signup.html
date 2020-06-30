@@ -1,0 +1,14 @@
+{% extends 'blog_app/base.html' %}
+{% load bootstrap4 %}   #to use bootstrap4, need to install [pip install django-bootstrap4]
+
+{% block body_block %}
+  <div class="jumbotron">
+
+     <h1>Sign Up</h1>
+     <form method="POST" class="form">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+         <button type="submit" class="btn btn-primary">Sign Up</button>
+     </form>
+  </div>
+  {% endblock %}
